@@ -21,13 +21,13 @@
 
 - 前端: HTML5, CSS3, JavaScript (原生)
 - 后端: FastAPI
-- AI: 基于大语言模型的称谓计算
+- AI: 基于硅基流动(SiliconFlow)提供的DeepSeek-V3大语言模型进行称谓计算
 
 ## 本地开发
 
 1. 克隆项目
 ```bash
-git clone [项目地址]
+git clone https://github.com/HisMax/RelationshipCalculator_AI.git
 ```
 
 2. 安装依赖
@@ -40,6 +40,15 @@ pip install -r requirements.txt
 ```
 API_KEY=你的API密钥
 ```
+4. 获取API密钥
+- 访问 [硅基流动官网](https://cloud.siliconflow.cn/i/g6TYzS6H)
+- 注册/登录账号
+- 在个人中心页面找到"API密钥"选项
+- 点击"创建API密钥"按钮生成新的密钥
+- 复制生成的密钥,粘贴到 `.config` 文件中
+
+注意:请妥善保管API密钥,不要泄露给他人。首次注册用户可获得免费的14元额度
+
 
 4. 启动服务器
 ```bash
@@ -62,37 +71,8 @@ python app.py
 └── README.md         # 项目说明
 ```
 
-## API接口
+## 感谢
 
-### POST /chat
-计算亲戚称谓关系
-
-请求体:
-```json
-{
-    "messages": [
-        {
-            "role": "system",
-            "content": "系统提示"
-        },
-        {
-            "role": "user", 
-            "content": "用户输入"
-        }
-    ],
-    "temperature": 0.1
-}
-```
-
-响应:
-```json
-{
-    "choices": [
-        {
-            "message": {
-                "content": "计算结果"
-            }
-        }
-    ]
-}
-```
+- 感谢硅基流动提供的国产DeepSeek-V3大语言模型
+- 感谢Cursor和DeepSeek提供的AI支持
+- 感谢所有为开源社区做出贡献的开发者们
