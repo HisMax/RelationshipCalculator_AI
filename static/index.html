@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亲戚称谓计算器</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1><i class="mdi mdi-account-group"></i> 亲戚称谓计算器</h1>
+            
+            <!-- 地区选择 -->
+            <div class="region-selector">
+                <h3>选择地区：</h3>
+                <div class="region-buttons">
+                    <button class="region-btn selected" data-region="common">
+                        <i class="mdi mdi-earth"></i>通用
+                    </button>
+                    <button class="region-btn" data-region="north">
+                        <i class="mdi mdi-compass-north"></i>北方
+                    </button>
+                    <button class="region-btn" data-region="south">
+                        <i class="mdi mdi-compass-south"></i>南方
+                    </button>
+                    <button class="region-btn" data-region="west">
+                        <i class="mdi mdi-compass-west"></i>西部
+                    </button>
+                    <button class="region-btn" data-region="special">
+                        <i class="mdi mdi-translate"></i>方言区
+                    </button>
+                </div>
+            </div>
+
+            <div class="calculator">
+                <!-- 当前路径显示 -->
+                <div class="path-display">
+                    <div class="current-path">
+                        <span class="label">当前关系：</span>
+                        <span id="currentPath" class="path">我</span>
+                    </div>
+                    <div class="buttons">
+                        <button id="clearBtn" class="secondary-btn">
+                            <i class="mdi mdi-refresh"></i>
+                            清除
+                        </button>
+                        <button id="calculateBtn" class="primary-btn" disabled>
+                            <i class="mdi mdi-check"></i>
+                            计算
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 输入区域 -->
+                <div class="input-area">
+                    <!-- 长辈关系 -->
+                    <div class="relation-group">
+                        <h3><i class="mdi mdi-account-arrow-up"></i>长辈</h3>
+                        <div class="relation-buttons">
+                            <button class="relation-btn" data-relation="father">
+                                <i class="mdi mdi-human-male"></i>爸爸
+                            </button>
+                            <button class="relation-btn" data-relation="mother">
+                                <i class="mdi mdi-human-female"></i>妈妈
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 平辈关系 -->
+                    <div class="relation-group">
+                        <h3><i class="mdi mdi-account-multiple"></i>平辈</h3>
+                        <div class="relation-buttons">
+                            <button class="relation-btn" data-relation="husband">
+                                <i class="mdi mdi-human-male"></i>丈夫
+                            </button>
+                            <button class="relation-btn" data-relation="wife">
+                                <i class="mdi mdi-human-female"></i>妻子
+                            </button>
+                            <button class="relation-btn" data-relation="older-brother">
+                                <i class="mdi mdi-human-male"></i>哥哥
+                            </button>
+                            <button class="relation-btn" data-relation="younger-brother">
+                                <i class="mdi mdi-human-male"></i>弟弟
+                            </button>
+                            <button class="relation-btn" data-relation="older-sister">
+                                <i class="mdi mdi-human-female"></i>姐姐
+                            </button>
+                            <button class="relation-btn" data-relation="younger-sister">
+                                <i class="mdi mdi-human-female"></i>妹妹
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 晚辈关系 -->
+                    <div class="relation-group">
+                        <h3><i class="mdi mdi-account-arrow-down"></i>晚辈</h3>
+                        <div class="relation-buttons">
+                            <button class="relation-btn" data-relation="son">
+                                <i class="mdi mdi-human-male"></i>儿子
+                            </button>
+                            <button class="relation-btn" data-relation="daughter">
+                                <i class="mdi mdi-human-female"></i>女儿
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 结果区域 -->
+            <div class="results-section">
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html> 
