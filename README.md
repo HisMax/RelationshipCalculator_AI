@@ -76,3 +76,7 @@ python app.py
 - 感谢硅基流动提供的国产DeepSeek-V3大语言模型
 - 感谢Cursor和DeepSeek提供的AI支持
 - 感谢所有为开源社区做出贡献的开发者们
+
+## 缺陷
+
+- 由于是基于大语言模型进行计算,所以计算结果可能存在误差,需要用户自行判断，如果追求最准确的计算结果，推荐使用[亲戚关系计算器](https://passer-by.com/relationship/)
